@@ -1,6 +1,6 @@
 # Diabetes prediction
 
-This pipeline is the one implemented to illustrate the use of MSLToolbox Code Generator, you can find details on the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki/Generating-pipeline-code). We encourage to read that article to understand the problem that the pipeline is trying to solve.
+This pipeline is the one implemented to illustrate the use of MSLToolbox Code Generator, you can find details on the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki). We encourage to read that article to understand the problem that the pipeline is trying to solve.
 
 The pipeline is composed of 4 stages:
 - *Data collection*, which will load de data from a `.csv` file
@@ -40,7 +40,7 @@ We get the data and split it in train and test datasets. The training part is us
 Finally, with the model trained and the test data, the model can be evaluated for its accuracy.
 
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/04_model_evaluation.png" alt="Model evaluation" width="50%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/4_model_evaluation.png" alt="Model evaluation" width="50%">
 </p>
 
 
