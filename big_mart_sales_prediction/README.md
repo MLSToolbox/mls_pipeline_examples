@@ -1,6 +1,6 @@
 # Big Mart Sales Predicition
 
-This pipeline is the one implemented for the demo at the [MLSToolbox Wiki](https://github.com/MLSToobox/.github/wiki/4.1-MLS-Code-Generator-Demo's#real-case-scenario-example). We encourage to read that article to understand the problem that the pipeline is trying to solve.
+This pipeline is implemented to ilustrate the demo at the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki/Big-Mart-Sales-prediction). We encourage to read that article to understand the problem that the pipeline is trying to solve.
 
 The pipeline is composed of 7 stages:
 - *Data Collection*, where data for training, testing and then preparing the submission for the hackthon is loaded. 
@@ -11,41 +11,41 @@ The pipeline is composed of 7 stages:
 - *Model Evaluation*, where the accuracy of the model is assessed using the test dataset.
 - *Deployment*, where the model is used to perform a prediction with the submission dataset and the result is stored into a CSV.
 
-![main editor](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/00_main.png)
+![main editor](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/0_main.png)
 
 ## Stages
 ### Data Collection
-![data collection](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/01_data_collection.png)
+![data collection](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/1_data_collection.png)
 The hackathon provides two files for the submission, one used for trianing and the other for submission. Both of them are loaded in the *Data Collection* stage using the CSV loader.
 
 ### Data Cleaning
-![data cleaning](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/02_data_cleaning.png)
+![data cleaning](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/2_data_cleaning.png)
 For cleaning, we just replace the numeric values in one of the columns with the average of the values in the column and the categorical values of another column with the mode.
 
 This step is executed twise as the first time to clean the train data and the second time to clean the submission data. For that, we use the `link` capability that is in the stage editor.
 
 ### Feature Engieering
-![feature engineering](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/03_feature_engineering.png)
+![feature engineering](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/3_feature_engineering.png)
 
 During the feature engineering stage, first we get the column that contains the labels/truth and separate it from the ones that are part of the input. Then, we perform a series of transformations to ensure that the model only receives numeric data as inputs. Also, some colums didn't have relevant information, therefore they are removed or transformed. The scalers and encoders are saved for later use as they need to be reused in the *Reuse Feature Engineering* stage.
 
 ### Reuse Feature Engineering
-![reuse feature engineering](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/04_reuse_feature_engineering.png)
+![reuse feature engineering](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/4_reuse_feature_engineering.png)
 
 This stage contains the same processes of *Feature Engineering* but applied to the data that is going to be submitted. The encoders and scalers trained during the *Feature Engineering* stage are reused.
 
 ### Model training
-![model training](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/05_model_training.png)
+![model training](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/5_model_training.png)
 
 For this solution, a Random Forest Regressor is used. details on the parameters can be seen in the editor. Here we also get a part of the dataset for validation.
 
 ### Model Evaluation
-![model evaluation](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/06_model_evaluation.png)
+![model evaluation](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/6_model_evaluation.png)
 
 A simple accuracy of the model is calculated using the test dataset created in the *Model Training* stage.
 
 ### Deployment
-![deployment](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/07_deployment.png)
+![deployment](https://raw.githubusercontent.com/MLSToolbox/mls_pipeline_examples/main/big_mart_sales_prediction/media/7_deployment.png)
 
 In this final stage we use the model to make a prediction with the submission dataset and store the result into a CSV file. Both nodes can be seen in the editor.
 
