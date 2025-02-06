@@ -40,7 +40,7 @@ We get the data and split it in train and test datasets. The training part is us
 Finally, with the model trained and the test data, the model can be evaluated for its accuracy.
 
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/04_model_evaluation.png" alt="Model evaluation" width="50%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/4_model_evaluation.png" alt="Model evaluation" width="50%">
 </p>
 
 
