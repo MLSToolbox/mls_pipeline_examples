@@ -222,6 +222,13 @@
                 "value": "./data/diabetes.csv",
                 "isParam": "parameter",
                 "param_label": "dataset_path"
+              },
+              "separator": {
+                "type": "string",
+                "show": false,
+                "value": ",",
+                "isParam": "parameter",
+                "param_label": "separator"
               }
             }
           },
