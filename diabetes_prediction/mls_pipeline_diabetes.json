@@ -674,7 +674,7 @@
               "train_percentage": {
                 "type": "number",
                 "show": true,
-                "value": 0,
+                "value": 0.3,
                 "isParam": "custom",
                 "param_label": ""
               }
