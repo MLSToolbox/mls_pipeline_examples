@@ -69,4 +69,10 @@ In this final stage we use the model to make a prediction with the submission da
 
 ## Results
 
-During the evaluation the model showed up a 61% accuracy. Once submited our results to the [hackathon](https://www.analyticsvidhya.com/datahack/contest/practice-problem-big-mart-sales-iii) and got a score of **1 153**, placing our submission in the 1 500 place of the total 50 000 participants by the time of writing of this file.
+During the evaluation the model showed up a 61% accuracy. Once submited our results to the [hackathon](https://www.analyticsvidhya.com/datahack/contest/practice-problem-big-mart-sales-iii) and got a score of **1152.2938**, placing our submission in the 1189 place of the total 52384 participants by the time of the submission (February 18th, 2025).
+
+<p align="center" width="100%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/big_mart_sales_prediction/media/8_results.png" alt="Submission results" width="50%">
+</p>
+
+
