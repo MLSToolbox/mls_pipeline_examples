@@ -65,7 +65,7 @@ A simple accuracy of the model is calculated using the test dataset created in t
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/big_mart_sales_prediction/media/7_deployment.png" alt="Model deployment" width="50%">
 </p>
 
-In this final stage we use the model to make a prediction with the submission dataset and store the result into a CSV file. Both nodes can be seen in the editor.
+In this final stage we use the model to make a prediction with the submission dataset and store the result into a CSV file with the columns indicated in the hackathon.
 
 ## Results
 
