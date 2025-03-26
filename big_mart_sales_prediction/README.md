@@ -68,6 +68,7 @@ A simple accuracy of the model is calculated using the test dataset created in t
 In this final stage we use the model to make a prediction with the submission dataset and store the result into a CSV file with the columns indicated in the hackathon.
 
 ## Results
+Files used to create the model are: **test.csv** and **train.csv** that can be found in this repository. The submitted file is **out.csv**, produced by our pipeline, that can also be found in  this repository.
 
 During the evaluation the model showed up a 61% accuracy. Once submited our results to the [hackathon](https://www.analyticsvidhya.com/datahack/contest/practice-problem-big-mart-sales-iii) and got a score of **1152.2938**, placing our submission in the 1189 place of the total 52384 participants by the time of the submission (February 18th, 2025).
 
