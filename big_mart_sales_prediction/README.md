@@ -72,5 +72,7 @@ Files used to create the model are: **test.csv** and **train.csv** that can be f
 
 During the evaluation the model showed up a 61% accuracy. Once submited our results to the [hackathon](https://www.analyticsvidhya.com/datahack/contest/practice-problem-big-mart-sales-iii) and got a score of **1152.2938**, placing our submission in the 1189 place of the total 52384 participants by the time of the submission (February 18th, 2025).
 
-
+<p align="center" width="100%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/big_mart_sales_prediction/media/8_submission_results.png" alt="Submission results" width="100%">
+</p>
 
