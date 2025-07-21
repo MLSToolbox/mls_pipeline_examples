@@ -43,6 +43,3 @@ Finally, with the model trained and the test data, the model can be evaluated fo
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/4_model_evaluation.png" alt="Model evaluation" width="50%">
 </p>
 
-
-## Results
-With this configuration, the SVM can predict the columns with an accuracy of almost 60%.
