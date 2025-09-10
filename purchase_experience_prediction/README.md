@@ -1,5 +1,6 @@
 # Diabetes prediction  -- TO BE CHANGEd
-
+--- I added an image to the media folder, without file I was not able to create the repository
+--- this figure should be replaced with the correct one
 This pipeline is implemented to illustrate the use of MSLToolbox Code Generator, you can find details on the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki). We encourage to read that article to understand the problem that the pipeline is trying to solve.
 
 The pipeline is composed of 4 stages:
