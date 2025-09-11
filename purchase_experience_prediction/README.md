@@ -23,7 +23,7 @@ A simple stage with one only task that loads the data from the `.csv` file
 A stage with five tasks, four of them replace null values of a column for the median value and one of them replaces null values for a specific text
 
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/1_data_cleaning.png" alt="Data cleaning" width="75%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/2_data_cleaning.png" alt="Data cleaning" width="75%">
 </p>
 
 ### Feature Engineering
@@ -31,7 +31,7 @@ A stage with five tasks, four of them replace null values of a column for the me
 A stage with tasks for removing 7 columns and splitting the data into features and truth or target values.
 
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/2_feature_engineering.png" alt="Feature engineering" width="75%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/3_feature_engineering.png" alt="Feature engineering" width="75%">
 </p>
 
 
@@ -39,13 +39,13 @@ A stage with tasks for removing 7 columns and splitting the data into features a
 A stage with task for splitting the data into train and test datasets. The training part is used to train a model with a linear regressor algorithm.
 
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/3_model_training.png" alt="Model training" width="75%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/4_model_training.png" alt="Model training" width="75%">
 </p>
 
 ### Model evaluation
 Finally, a stage with 3 stages for evaluating the accuracy, the R2 score and the MSE and RMSE metrics for the trained model.
 
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/4_model_evaluation.png" alt="Model evaluation" width="50%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/5_model_evaluation.png" alt="Model evaluation" width="50%">
 </p>
 
