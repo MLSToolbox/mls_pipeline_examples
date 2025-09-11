@@ -23,7 +23,7 @@ A simple stage with one only task that loads the data from the `.csv` file
 A stage with five tasks, four of them replace null values of a column for the median value and one of them replaces null values for a specific text
 
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/1_data_cleaning.png" alt="Data cleaning" width="50%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/1_data_cleaning.png" alt="Data cleaning" width="75%">
 </p>
 
 ### Feature Engineering
