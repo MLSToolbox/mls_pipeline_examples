@@ -6,9 +6,9 @@ This pipeline is implemented to illustrate the use of MSLToolbox Code Generator,
 
 The pipeline is composed of 4 stages:
 - *Data collection*, which will load de data from a `.csv` file
-- *Feature Engineering*, where some of the values will be scaled for faster and more accurate training
-- *Model Training*, where our dataset will be split in train an test and the model will be trained
-- *Model Evaluation*, where using the test part of the dataset we'll assesss the accuracy of the model
+- *Split*, where features data will be split into features_train and features_test data and truth data into truth_train and truth_test data
+- *Model Training*, where two different models will be trained
+- *Model Evaluation*, where using the test part of the dataset we'll assesss the accuracy of both models
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/0_main.png" alt="Main editor" width="75%">
@@ -16,15 +16,15 @@ The pipeline is composed of 4 stages:
 
 ## Stages
 ### Data Collection
-A simple stage with one only task that loads the data from the `.csv` file
+A simple stage with one only task that loads the data from the `.csv` file and generate two outputs: iris_data and iris_target
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/1_data_collection.png" alt="Data collection" width="50%">
 </p>
 
-### Feature Engineering
+### Split
 
-Here we separate the data into the features and the labels/truth. Afterwards, different scaling is done for the columns.
+The data of both outputs obtained in the previous step are split in train and test datasets.
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/2_feature_engineering.png" alt="Feature engineering" width="75%">
@@ -32,14 +32,14 @@ Here we separate the data into the features and the labels/truth. Afterwards, di
 
 
 ### Model Training
-We get the data and split it in train and test datasets. The training part is used to train an SVM and the test part is outputed for the *Model Evaluation* stage to use.
+The training data obtained in the previous step is used to train a Random Regressor model and a SVC model.
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/3_model_training.png" alt="Model training" width="75%">
 </p>
 
 ### Model evaluation
-Finally, with the model trained and the test data, the model can be evaluated for its accuracy.
+Finally, with both model trained and the test data obtained in the Split step, both model are evaluated for their accuracy.
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/4_model_evaluation.png" alt="Model evaluation" width="50%">
