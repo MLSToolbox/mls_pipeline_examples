@@ -1,10 +1,10 @@
-This pipeline is implemented to illustrate the use of MSLToolbox Code Generator, you can find details on the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki). We encourage to read information provided in that link to understand the problem that the pipeline is trying to solve.
+This pipeline is implemented to illustrate the use of MSLToolbox Code Generator, you can find details on the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki). We encourage to read the information provided in that link to understand the problem that the pipeline is trying to solve.
 
 The pipeline is composed of 4 stages:
-- *Data collection*, which will load de data from a `.csv` file
-- *Split*, where features data will be split into features_train and features_test data and truth data into truth_train and truth_test data
-- *Model Training*, where two different models will be trained
-- *Model Evaluation*, where using the test data both models will be assesssed with the accuracy metric
+- *Data collection*, which loads the data from a `.csv` file
+- *Split*, where features data is split into features_train and features_test data and truth data into truth_train and truth_test data
+- *Model Training*, where two different models are trained
+- *Model Evaluation*, where using the test data, both models are assesssed with the accuracy metric
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/iris_classification/media/0_main.png" alt="Main editor" width="75%">
@@ -19,7 +19,6 @@ A simple stage with one only task that loads the data from the `.csv` file and g
 </p>
 
 ### Split
-
 The data of both outputs obtained in the previous step are split in train and test datasets.
 
 <p align="center" width="100%">
