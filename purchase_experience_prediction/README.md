@@ -2,10 +2,10 @@ This pipeline is implemented to illustrate the use of MSLToolbox Code Generator,
 
 The pipeline is composed of 5 stages:
 - *Data collection*, which loads the data from a `.csv` file
-- *Data cleaning*, which cleans the data replacing null values for the median of 4 columns and replacing null values for a specific text in another column
+- *Data cleaning*, which cleans the data of 4 columns replacing null values for the median values and replacing null values for a specific text in another column
 - *Feature Engineering*, where 7 columns are removed and the data is split in features and truth or target values
-- *Model Training*, where the dataset is split in train an test and the model is trained with a linear regressor
-- *Model Evaluation*, where using the test data several metrics (accuracy, R2 score, MSE and RMSE) are used to assess the model
+- *Model Training*, where the dataset is split in train and test data and the model is trained with a linear regressor
+- *Model Evaluation*, where using the test data, several metrics (accuracy, R2 score, MSE and RMSE) are computed for the model
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/0_main.png" alt="Main editor" width="75%">
@@ -20,7 +20,7 @@ A simple stage with one only task that loads the data from the `.csv` file
 </p>
 
 ### Data Cleaning
-A stage with five tasks, four of them replace null values of a column for the median value and one of them replaces null values for a specific text
+A stage with five tasks, four of them to replace null values of a column for their median value and one of them to replace null values for a specific text
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/2_data_cleaning.png" alt="Data cleaning" width="75%">
@@ -28,7 +28,7 @@ A stage with five tasks, four of them replace null values of a column for the me
 
 ### Feature Engineering
 
-A stage with tasks for removing 7 columns and splitting the data into features and truth or target values.
+A stage with tasks for removing 7 columns and splitting the data into features and truth or target values data.
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/3_feature_engineering.png" alt="Feature engineering" width="75%">
@@ -36,7 +36,7 @@ A stage with tasks for removing 7 columns and splitting the data into features a
 
 
 ### Model Training
-A stage with task for splitting the data into train and test datasets. The training part is used to train a model with a linear regressor algorithm.
+A stage with a task for splitting the data into train and test data. The training data is used to train a model with a linear regressor algorithm.
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/4_model_training.png" alt="Model training" width="75%">
