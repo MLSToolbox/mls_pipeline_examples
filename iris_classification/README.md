@@ -1,10 +1,10 @@
-This pipeline is implemented to illustrate the use of MSLToolbox Code Generator, you can find details on the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki). We encourage to read that article to understand the problem that the pipeline is trying to solve.
+This pipeline is implemented to illustrate the use of MSLToolbox Code Generator, you can find details on the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki). We encourage to read information provided in that link to understand the problem that the pipeline is trying to solve.
 
 The pipeline is composed of 4 stages:
 - *Data collection*, which will load de data from a `.csv` file
 - *Split*, where features data will be split into features_train and features_test data and truth data into truth_train and truth_test data
 - *Model Training*, where two different models will be trained
-- *Model Evaluation*, where using the test part of the dataset we'll assesss the accuracy of both models
+- *Model Evaluation*, where using the test data both models will be assesssed with the accuracy metric
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/iris_classification/media/0_main.png" alt="Main editor" width="75%">
@@ -12,7 +12,7 @@ The pipeline is composed of 4 stages:
 
 ## Stages
 ### Data Collection
-A simple stage with one only task that loads the data from the `.csv` file and generate two outputs: iris_data and iris_target
+A simple stage with one only task that loads the data from the `.csv` file and generates two outputs: iris_data and iris_target
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/iris_classification/media/1_data_collection.png" alt="Data collection" width="50%">
@@ -39,7 +39,7 @@ The training data obtained in the previous step is used to train a Random Regres
 </p>
 
 ### Model evaluation
-Finally, with both model trained and the test data obtained in the Split step, both model are evaluated for their accuracy.
+Finally, with both models trained and the test data obtained in the Split step, both models are evaluated for their accuracy.
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/iris_classification/media/4.1_model_evaluation.png" alt="Model evaluation for Linear Regressor" width="75%">
