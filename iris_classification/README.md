@@ -1,3 +1,5 @@
+#Iris Classification
+
 This pipeline is implemented to illustrate the use of MSLToolbox Code Generator, you can find details on the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki). We encourage to read the information provided in that link to understand the problem that the pipeline is trying to solve.
 
 The pipeline is composed of 4 stages:
@@ -37,7 +39,7 @@ The training data obtained in the previous step is used to train a Random Regres
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/iris_classification/media/3.2_model_training.png" alt="Model training with SVC" width="75%">
 </p>
 
-### Model evaluation
+### Model Evaluation
 Finally, with both models trained and the test data obtained in the Split step, both models are evaluated for their accuracy.
 
 <p align="center" width="100%">
