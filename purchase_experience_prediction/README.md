@@ -45,7 +45,7 @@ A stage with a task for splitting the data into train and test data. The trainin
 </p>
 
 ### Model Evaluation
-Finally, a stage with 3 stages for evaluating the accuracy, the R2 score and the MSE and RMSE metrics for the trained model.
+Finally, a stage with 3 tasks for evaluating the accuracy, the R2 score and the MSE and RMSE metrics for the trained model.
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/5_model_evaluation.png" alt="Model evaluation" width="50%">
