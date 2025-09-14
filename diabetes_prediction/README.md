@@ -36,7 +36,7 @@ We get the data and split it in train and test datasets. The training part is us
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/diabetes_prediction/media/3_model_training.png" alt="Model training" width="75%">
 </p>
 
-### Model evaluation
+### Model Evaluation
 Finally, with the model trained and the test data, the model can be evaluated for its accuracy.
 
 <p align="center" width="100%">
