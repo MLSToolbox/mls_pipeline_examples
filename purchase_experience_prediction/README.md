@@ -44,7 +44,7 @@ A stage with a task for splitting the data into train and test data. The trainin
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/4_model_training.png" alt="Model training" width="75%">
 </p>
 
-### Model evaluation
+### Model Evaluation
 Finally, a stage with 3 stages for evaluating the accuracy, the R2 score and the MSE and RMSE metrics for the trained model.
 
 <p align="center" width="100%">
