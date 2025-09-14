@@ -1,4 +1,4 @@
-# Big Mart Sales Predicition
+# Big Mart Sales Prediction
 
 This pipeline is implemented to ilustrate the demo at the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki/Big-Mart-Sales-prediction). We encourage to read that article to understand the problem that the pipeline is trying to solve.
 
@@ -32,7 +32,7 @@ For cleaning, we just replace the numeric values in one of the columns with the 
 
 This step is executed twise as the first time to clean the train data and the second time to clean the submission data. For that, we use the `link` capability that is in the stage editor.
 
-### Feature Engieering
+### Feature Engineering
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/big_mart_sales_prediction/media/3_feature_engineering.png" alt="Data cleaning" width="100%">
 </p>
@@ -46,7 +46,7 @@ During the feature engineering stage, first we get the column that contains the 
 
 This stage contains the same processes of *Feature Engineering* but applied to the data that is going to be submitted. The encoders and scalers trained during the *Feature Engineering* stage are reused.
 
-### Model training
+### Model Training
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/big_mart_sales_prediction/media/5_model_training.png" alt="Model traininng" width="50%">
 </p>
