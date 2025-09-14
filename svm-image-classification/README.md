@@ -5,7 +5,7 @@ This pipeline is implemented to illustrate the use of MSLToolbox Code Generator,
 The pipeline is composed of 4 stages:
 - *Data collection*, which loads the colour images of the CIFAR-10 dataset and their labels.
 - *Feature Engineering*, where the data is normalized (scaling pixel values to range [0,1]), a smaller subset for faster training is selected and the columns are selected
-- *Model Training*, where the dataset obtained in the previous stage is split in train and test data and the model is trained with a SVM algoritm
+- *Model Training*, where the dataset obtained in the previous stage is split in train and test data and the model is trained with a SVM algorithm
 - *Model Evaluation*, where using the test data, predictions are performed and a classification report is generated with the predictions, the confusion matrix and metrics such as precision, recall, f1-score and support
  
 <p align="center" width="100%">
