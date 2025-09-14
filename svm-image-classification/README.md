@@ -7,7 +7,7 @@ The pipeline is composed of 4 stages:
 - *Model Evaluation*, where using the test data, predictions are performed and a classification report is generated with the predictions, the confusion matrix and metrics such as precision, recall, f1-score and support
  
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/svm_image_classification/media/0_main.png" alt="Main editor" width="75%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/svm-image-classification/media/0_main.png" alt="Main editor" width="75%">
 </p>
 
 ## Stages
@@ -15,20 +15,20 @@ The pipeline is composed of 4 stages:
 A stage with two tasks that load the images of the CIFAR-10 dataset and the labels file
 
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/svm_image_classification/media/1_data_collection.png" alt="Data collection" width="50%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/svm-image-classification/media/1_data_collection.png" alt="Data collection" width="50%">
 </p>
 
 ### Feature Engineering
 A stage with four tasks, one for selecting a smaller subset of data for faster training, another for normalizing the data and the other two for selecting the columns for training
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/svm_image_classification/media/2_feature_engineering.png" alt="Feature engineering" width="75%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/svm-image-classification/media/2_feature_engineering.png" alt="Feature engineering" width="75%">
 </p>
 
 ### Model Training
 A stage with a task for splitting the data into train and test data. The training data is used to train a model with a SVM algorithm.
 
 <p align="center" width="100%">
-   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/svm_image_classification/media/3_model_training.png" alt="Model training" width="75%">
+   <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/svm-image-classification/media/3_model_training.png" alt="Model training" width="75%">
 </p>
 
 ### Model evaluation
