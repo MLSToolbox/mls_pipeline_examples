@@ -33,7 +33,7 @@ A stage with a task for splitting the data into train and test data. The trainin
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/svm-image-classification/media/3_model_training.png" alt="Model training" width="75%">
 </p>
 
-### Model evaluation
+### Model Evaluation
 Finally, a stage with 2 tasks for making predictions and evaluating the trained model providing the confusion matrix and metrics such as precision, recall, f1-score and support
 
 <p align="center" width="100%">
