@@ -3,10 +3,10 @@
 This pipeline is implemented to illustrate the use of MSLToolbox Code Generator, you can find details on the [MLSToolbox Code Generator Wiki](https://github.com/MLSToolbox/mls_code_generator/wiki). We encourage to read the information provided in that link to understand the problem that the pipeline is trying to solve.
 
 The pipeline is composed of 4 stages:
-- *Data collection*, which loads the data from a `.csv` file
+- *Data collection*, which loads the data from the IrisLoader that comes with the [scikit-learn](https://scikit-learn.org/1.5/auto_examples/datasets/plot_iris_dataset.html).
 - *Split*, where features data is split into features_train and features_test data and truth data into truth_train and truth_test data
 - *Model Training*, where two different models are trained
-- *Model Evaluation*, where using the test data, both models are assesssed with the accuracy metric
+- *Model Evaluation*, where using the test data, both models are assessed with the accuracy metric
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/iris_classification/media/0_main.png" alt="Main editor" width="75%">
@@ -14,14 +14,14 @@ The pipeline is composed of 4 stages:
 
 ## Stages
 ### Data Collection
-A simple stage with one only task that loads the data from the `.csv` file and generates two outputs: iris_data and iris_target
+A simple stage with only one task that loads the data from the `.csv` file and generates two outputs: iris_data and iris_target
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/iris_classification/media/1_data_collection.png" alt="Data collection" width="50%">
 </p>
 
 ### Split
-The data of both outputs obtained in the previous step are split in train and test datasets.
+The data from both outputs obtained in the previous step are split into train and test datasets.
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/iris_classification/media/2_split.png" alt="Split" width="75%">
