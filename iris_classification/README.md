@@ -14,7 +14,7 @@ The pipeline is composed of 4 stages:
 
 ## Stages
 ### Data Collection
-A simple stage with only one task that loads the data from the `.csv` file and generates two outputs: iris_data and iris_target
+A simple stage with only one task that loads the data using `datasets.load_iris()` from  [scikit-learn](https://scikit-learn.org/1.5/auto_examples/datasets/plot_iris_dataset.html) that generates two outputs: iris_data and iris_target
 
 <p align="center" width="100%">
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/iris_classification/media/1_data_collection.png" alt="Data collection" width="50%">
