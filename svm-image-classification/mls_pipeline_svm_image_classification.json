@@ -414,7 +414,7 @@
               "kernel": {
                 "type": "option",
                 "show": false,
-                "value": "linear",
+                "value": "rbf",
                 "optionId": "SVMKernel",
                 "isParam": "custom",
                 "param_label": ""
