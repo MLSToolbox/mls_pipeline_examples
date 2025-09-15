@@ -1753,7 +1753,7 @@
                 "type": "list",
                 "show": false,
                 "value": [
-                  "Outlet_Identifer"
+                  "Outlet_Identifier"
                 ],
                 "isParam": "custom",
                 "param_label": ""
