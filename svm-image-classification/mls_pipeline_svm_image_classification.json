@@ -1,0 +1,1380 @@
+{
+  "modules": {
+    "0c7788842ca589f9": {
+      "nodes": [
+        {
+          "id": "a89f8eb5e7403cf0",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "data"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Input",
+          "nodeName": "Input"
+        },
+        {
+          "id": "465bfdf6eff57b8c",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "features"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Output",
+          "nodeName": "Output"
+        },
+        {
+          "id": "300f2060fee69e4f",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "truth"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Output",
+          "nodeName": "Output"
+        },
+        {
+          "id": "094e70b51ca0faf5",
+          "data": {
+            "info": {
+              "title": "Divides de row into a subset"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "value": "Subset for fast training",
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "select_percentage": {
+                "type": "number",
+                "show": true,
+                "value": "0.1",
+                "isParam": "custom",
+                "param_label": ""
+              }
+            }
+          },
+          "name": "Generate Subset",
+          "nodeName": "Generate Subset"
+        },
+        {
+          "id": "6d003090678976f5",
+          "data": {
+            "info": {
+              "title": "Applies a basic operator to each entry of the input table's column."
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "operator": {
+                "type": "option",
+                "show": false,
+                "value": "/",
+                "optionId": "BasicOperator",
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "value": {
+                "type": "number",
+                "show": false,
+                "value": "255.0",
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "columns": {
+                "type": "list",
+                "show": true,
+                "value": [
+                  "data"
+                ],
+                "isParam": "custom",
+                "param_label": ""
+              }
+            }
+          },
+          "name": "BasicOperator",
+          "nodeName": "BasicOperator"
+        },
+        {
+          "id": "2464afd28c69a747",
+          "data": {
+            "info": {
+              "title": "Selects given Columns"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "columns": {
+                "type": "list",
+                "show": false,
+                "value": [
+                  "data"
+                ],
+                "isParam": "custom",
+                "param_label": ""
+              }
+            }
+          },
+          "name": "Select Columns",
+          "nodeName": "Select Columns"
+        },
+        {
+          "id": "53676ef25095c174",
+          "data": {
+            "info": {
+              "title": "Selects given Columns"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "columns": {
+                "type": "list",
+                "show": false,
+                "value": [
+                  "labels"
+                ],
+                "isParam": "custom",
+                "param_label": ""
+              }
+            }
+          },
+          "name": "Select Columns",
+          "nodeName": "Select Columns"
+        }
+      ],
+      "connections": [
+        {
+          "source": "a89f8eb5e7403cf0",
+          "sourceOutput": "value",
+          "target": "094e70b51ca0faf5",
+          "targetInput": "table"
+        },
+        {
+          "source": "094e70b51ca0faf5",
+          "sourceOutput": "selected_table",
+          "target": "6d003090678976f5",
+          "targetInput": "origin_table"
+        },
+        {
+          "source": "2464afd28c69a747",
+          "sourceOutput": "resulting_table",
+          "target": "465bfdf6eff57b8c",
+          "targetInput": "value"
+        },
+        {
+          "source": "6d003090678976f5",
+          "sourceOutput": "out",
+          "target": "2464afd28c69a747",
+          "targetInput": "origin_table"
+        },
+        {
+          "source": "6d003090678976f5",
+          "sourceOutput": "out",
+          "target": "53676ef25095c174",
+          "targetInput": "origin_table"
+        },
+        {
+          "source": "53676ef25095c174",
+          "sourceOutput": "resulting_table",
+          "target": "300f2060fee69e4f",
+          "targetInput": "value"
+        }
+      ],
+      "inputs": [
+        {
+          "id": "a89f8eb5e7403cf0",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "data"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "465bfdf6eff57b8c",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "features"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        },
+        {
+          "id": "300f2060fee69e4f",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "truth"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "7a73395d26fc9d60": {
+      "nodes": [
+        {
+          "id": "85e7b633689d8170",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "features"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Input",
+          "nodeName": "Input"
+        },
+        {
+          "id": "c7ec4e947934dbae",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "truth"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Input",
+          "nodeName": "Input"
+        },
+        {
+          "id": "13cc74ed7abccbbe",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "trained_model"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "Model"
+              }
+            }
+          },
+          "name": "Output",
+          "nodeName": "Output"
+        },
+        {
+          "id": "a3aab233a6f904a2",
+          "data": {
+            "info": {
+              "title": "Trains Support Vector Machine"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "kernel": {
+                "type": "option",
+                "show": false,
+                "value": "linear",
+                "optionId": "SVMKernel",
+                "isParam": "custom",
+                "param_label": ""
+              }
+            }
+          },
+          "name": "SVM train",
+          "nodeName": "SVM train"
+        },
+        {
+          "id": "6ac83407d4e89e9d",
+          "data": {
+            "info": {
+              "title": "Splits data into train and test"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "train_percentage": {
+                "type": "number",
+                "show": true,
+                "value": "0.7",
+                "isParam": "custom",
+                "param_label": ""
+              }
+            }
+          },
+          "name": "Split train test",
+          "nodeName": "Split train test"
+        },
+        {
+          "id": "037ed5f08ec3a0c7",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "features_test"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Output",
+          "nodeName": "Output"
+        },
+        {
+          "id": "7cd1459759c599b4",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "truth_test"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Output",
+          "nodeName": "Output"
+        }
+      ],
+      "connections": [
+        {
+          "source": "a3aab233a6f904a2",
+          "sourceOutput": "model",
+          "target": "13cc74ed7abccbbe",
+          "targetInput": "value"
+        },
+        {
+          "source": "85e7b633689d8170",
+          "sourceOutput": "value",
+          "target": "6ac83407d4e89e9d",
+          "targetInput": "features"
+        },
+        {
+          "source": "c7ec4e947934dbae",
+          "sourceOutput": "value",
+          "target": "6ac83407d4e89e9d",
+          "targetInput": "truth"
+        },
+        {
+          "source": "6ac83407d4e89e9d",
+          "sourceOutput": "features_train",
+          "target": "a3aab233a6f904a2",
+          "targetInput": "features"
+        },
+        {
+          "source": "6ac83407d4e89e9d",
+          "sourceOutput": "truth_train",
+          "target": "a3aab233a6f904a2",
+          "targetInput": "truth"
+        },
+        {
+          "source": "6ac83407d4e89e9d",
+          "sourceOutput": "features_test",
+          "target": "037ed5f08ec3a0c7",
+          "targetInput": "value"
+        },
+        {
+          "source": "6ac83407d4e89e9d",
+          "sourceOutput": "truth_test",
+          "target": "7cd1459759c599b4",
+          "targetInput": "value"
+        }
+      ],
+      "inputs": [
+        {
+          "id": "85e7b633689d8170",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "features"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        },
+        {
+          "id": "c7ec4e947934dbae",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "truth"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "id": "13cc74ed7abccbbe",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "trained_model"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "Model"
+              }
+            }
+          }
+        },
+        {
+          "id": "037ed5f08ec3a0c7",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "features_test"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        },
+        {
+          "id": "7cd1459759c599b4",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "truth_test"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ac66f6bd2ab55fc8": {
+      "nodes": [
+        {
+          "id": "42e83a94787b1972",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "model"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "Model"
+              }
+            }
+          },
+          "name": "Input",
+          "nodeName": "Input"
+        },
+        {
+          "id": "0ab6559bc8954c53",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "labels"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Input",
+          "nodeName": "Input"
+        },
+        {
+          "id": "243a7c2f3b93694d",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "features_test"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Input",
+          "nodeName": "Input"
+        },
+        {
+          "id": "ab7a9bdb4acae3b5",
+          "data": {
+            "info": {
+              "title": "Performs prediction of a model"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "isParam": "custom",
+                "param_label": ""
+              }
+            }
+          },
+          "name": "Model predict",
+          "nodeName": "Model predict"
+        },
+        {
+          "id": "0c8df262c74e09de",
+          "data": {
+            "info": {
+              "title": "Changes the value of each element in a column given a dictionary."
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "target_col": {
+                "type": "string",
+                "show": true,
+                "value": "labels",
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "index_col": {
+                "type": "string",
+                "show": true,
+                "value": "label_names",
+                "isParam": "custom",
+                "param_label": ""
+              }
+            }
+          },
+          "name": "Map",
+          "nodeName": "Map"
+        },
+        {
+          "id": "46064ed0cc3c7b09",
+          "data": {
+            "info": {
+              "title": "Stores a dataframe to a CSV file"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "path": {
+                "type": "string",
+                "show": true,
+                "value": "",
+                "isParam": "parameter",
+                "param_label": "output_path"
+              }
+            }
+          },
+          "name": "To CSV",
+          "nodeName": "To CSV"
+        },
+        {
+          "id": "6b61e8a168a67876",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "truth_test"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Input",
+          "nodeName": "Input"
+        },
+        {
+          "id": "2c3f5c120faae723",
+          "data": {
+            "info": {
+              "title": "Evaluates the classification capability of the model"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "isParam": "custom",
+                "param_label": ""
+              }
+            }
+          },
+          "name": "Classification Report",
+          "nodeName": "Classification Report"
+        },
+        {
+          "id": "43f347263444613d",
+          "data": {
+            "info": {
+              "title": "Gets the confusion matrix of the model"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "isParam": "custom",
+                "param_label": ""
+              }
+            }
+          },
+          "name": "Confusion Matrix",
+          "nodeName": "Confusion Matrix"
+        }
+      ],
+      "connections": [
+        {
+          "source": "42e83a94787b1972",
+          "sourceOutput": "value",
+          "target": "ab7a9bdb4acae3b5",
+          "targetInput": "model"
+        },
+        {
+          "source": "243a7c2f3b93694d",
+          "sourceOutput": "value",
+          "target": "ab7a9bdb4acae3b5",
+          "targetInput": "features"
+        },
+        {
+          "source": "0ab6559bc8954c53",
+          "sourceOutput": "value",
+          "target": "0c8df262c74e09de",
+          "targetInput": "index"
+        },
+        {
+          "source": "ab7a9bdb4acae3b5",
+          "sourceOutput": "prediction",
+          "target": "0c8df262c74e09de",
+          "targetInput": "origin_table"
+        },
+        {
+          "source": "0c8df262c74e09de",
+          "sourceOutput": "resulting_table",
+          "target": "46064ed0cc3c7b09",
+          "targetInput": "dataframe"
+        },
+        {
+          "source": "42e83a94787b1972",
+          "sourceOutput": "value",
+          "target": "2c3f5c120faae723",
+          "targetInput": "model"
+        },
+        {
+          "source": "243a7c2f3b93694d",
+          "sourceOutput": "value",
+          "target": "2c3f5c120faae723",
+          "targetInput": "features"
+        },
+        {
+          "source": "6b61e8a168a67876",
+          "sourceOutput": "value",
+          "target": "2c3f5c120faae723",
+          "targetInput": "truth"
+        },
+        {
+          "source": "42e83a94787b1972",
+          "sourceOutput": "value",
+          "target": "43f347263444613d",
+          "targetInput": "model"
+        },
+        {
+          "source": "243a7c2f3b93694d",
+          "sourceOutput": "value",
+          "target": "43f347263444613d",
+          "targetInput": "features"
+        },
+        {
+          "source": "6b61e8a168a67876",
+          "sourceOutput": "value",
+          "target": "43f347263444613d",
+          "targetInput": "truth"
+        }
+      ],
+      "inputs": [
+        {
+          "id": "42e83a94787b1972",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "model"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "Model"
+              }
+            }
+          }
+        },
+        {
+          "id": "0ab6559bc8954c53",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "labels"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        },
+        {
+          "id": "243a7c2f3b93694d",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "features_test"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        },
+        {
+          "id": "6b61e8a168a67876",
+          "data": {
+            "info": {
+              "title": "Input of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": ""
+              },
+              "key": {
+                "type": "description",
+                "value": "truth_test"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        }
+      ],
+      "outputs": []
+    },
+    "fd87e5b07c51650b": {
+      "nodes": [
+        {
+          "id": "a2a39094189868ea",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": "Imports data"
+              },
+              "key": {
+                "type": "description",
+                "value": "raw_data"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Output",
+          "nodeName": "Output"
+        },
+        {
+          "id": "7ed4b1e42cfb47ff",
+          "data": {
+            "info": {
+              "title": "Loads Pickled file from disk"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "value": "data",
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "path": {
+                "type": "string",
+                "show": true,
+                "value": "",
+                "isParam": "parameter",
+                "param_label": "dataset_path"
+              }
+            }
+          },
+          "name": "Pickle Loader",
+          "nodeName": "Pickle Loader"
+        },
+        {
+          "id": "8c706f80f9624d9a",
+          "data": {
+            "info": {
+              "title": "Loads Pickled file from disk"
+            },
+            "params": {
+              "description": {
+                "type": "description",
+                "show": true,
+                "value": "labels",
+                "isParam": "custom",
+                "param_label": ""
+              },
+              "path": {
+                "type": "string",
+                "show": true,
+                "value": "",
+                "isParam": "parameter",
+                "param_label": "labels_path"
+              }
+            }
+          },
+          "name": "Pickle Loader",
+          "nodeName": "Pickle Loader"
+        },
+        {
+          "id": "e2f1100b42f70a71",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": "Imports data"
+              },
+              "key": {
+                "type": "description",
+                "value": "labels"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          },
+          "name": "Output",
+          "nodeName": "Output"
+        }
+      ],
+      "connections": [
+        {
+          "source": "7ed4b1e42cfb47ff",
+          "sourceOutput": "out",
+          "target": "a2a39094189868ea",
+          "targetInput": "value"
+        },
+        {
+          "source": "8c706f80f9624d9a",
+          "sourceOutput": "out",
+          "target": "e2f1100b42f70a71",
+          "targetInput": "value"
+        }
+      ],
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "a2a39094189868ea",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": "Imports data"
+              },
+              "key": {
+                "type": "description",
+                "value": "raw_data"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        },
+        {
+          "id": "e2f1100b42f70a71",
+          "data": {
+            "info": {
+              "title": "Output of module"
+            },
+            "params": {
+              "description": {
+                "show": true,
+                "type": "description",
+                "value": "Imports data"
+              },
+              "key": {
+                "type": "description",
+                "value": "labels"
+              },
+              "type": {
+                "optionId": "socket_type",
+                "type": "option",
+                "value": "DataFrame"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "root": {
+      "nodes": [
+        {
+          "id": "fd87e5b07c51650b",
+          "data": {
+            "info": {
+              "title": "Contains Step"
+            },
+            "params": {
+              "Stage name": {
+                "type": "description",
+                "value": "Data Collection"
+              },
+              "color": {
+                "type": "color",
+                "value": "rgba(54, 162, 235, 0.75)"
+              },
+              "link": {
+                "type": "link",
+                "value": ""
+              }
+            }
+          },
+          "name": "Step",
+          "nodeName": "Step"
+        },
+        {
+          "id": "0c7788842ca589f9",
+          "data": {
+            "info": {
+              "title": "Contains Step"
+            },
+            "params": {
+              "Stage name": {
+                "type": "description",
+                "value": "Feature Engineering"
+              },
+              "color": {
+                "type": "color",
+                "value": "rgba(255, 99, 132, 0.75)"
+              },
+              "link": {
+                "type": "link",
+                "value": ""
+              }
+            }
+          },
+          "name": "Step",
+          "nodeName": "Step"
+        },
+        {
+          "id": "7a73395d26fc9d60",
+          "data": {
+            "info": {
+              "title": "Contains Step"
+            },
+            "params": {
+              "Stage name": {
+                "type": "description",
+                "value": "Model Train"
+              },
+              "color": {
+                "type": "color",
+                "value": "rgba(255, 206, 86, 0.75)"
+              },
+              "link": {
+                "type": "link",
+                "value": ""
+              }
+            }
+          },
+          "name": "Step",
+          "nodeName": "Step"
+        },
+        {
+          "id": "ac66f6bd2ab55fc8",
+          "data": {
+            "info": {
+              "title": "Contains Step"
+            },
+            "params": {
+              "Stage name": {
+                "type": "description",
+                "value": "Model evaluation"
+              },
+              "color": {
+                "type": "color",
+                "value": "rgba(255, 159, 64, 0.75)"
+              },
+              "link": {
+                "type": "link",
+                "value": ""
+              }
+            }
+          },
+          "name": "Step",
+          "nodeName": "Step"
+        }
+      ],
+      "connections": [
+        {
+          "source": "0c7788842ca589f9",
+          "sourceOutput": "features",
+          "target": "7a73395d26fc9d60",
+          "targetInput": "features"
+        },
+        {
+          "source": "0c7788842ca589f9",
+          "sourceOutput": "truth",
+          "target": "7a73395d26fc9d60",
+          "targetInput": "truth"
+        },
+        {
+          "source": "7a73395d26fc9d60",
+          "sourceOutput": "trained_model",
+          "target": "ac66f6bd2ab55fc8",
+          "targetInput": "model"
+        },
+        {
+          "source": "fd87e5b07c51650b",
+          "sourceOutput": "raw_data",
+          "target": "0c7788842ca589f9",
+          "targetInput": "data"
+        },
+        {
+          "source": "7a73395d26fc9d60",
+          "sourceOutput": "features_test",
+          "target": "ac66f6bd2ab55fc8",
+          "targetInput": "features_test"
+        },
+        {
+          "source": "fd87e5b07c51650b",
+          "sourceOutput": "labels",
+          "target": "ac66f6bd2ab55fc8",
+          "targetInput": "labels"
+        },
+        {
+          "source": "7a73395d26fc9d60",
+          "sourceOutput": "truth_test",
+          "target": "ac66f6bd2ab55fc8",
+          "targetInput": "truth_test"
+        }
+      ],
+      "inputs": [],
+      "outputs": []
+    }
+  }
+}
