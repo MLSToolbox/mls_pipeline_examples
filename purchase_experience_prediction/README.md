@@ -51,7 +51,7 @@ Finally, a stage with 3 tasks for evaluating the accuracy, the R2 score and the 
    <img src="https://github.com/MLSToolbox/mls_pipeline_examples/blob/main/purchase_experience_prediction/media/5_model_evaluation.png" alt="Model evaluation" width="35%">
 </p>
 
-### Alternative Data Collection stage
+## Alternative Data Collection stage
 
 The selected datasets for this example and their structure may be found in the [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). In total, the datasets have 52 columns. The datasets have been merged following the data schema provided in [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) to obtain a single dataset.
 
